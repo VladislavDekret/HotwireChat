@@ -5,19 +5,19 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version:
     3.0.1
 
-* Rails version
+* Rails version:
     7.0.1
 
-* Database creation
+* Database creation:
     rails db:create
 
-* Database initialization
+* Database initialization:
     rails db:migrate
 
-* Run server
+* Run server:
     bin/dev
 
 # HotwireChat
