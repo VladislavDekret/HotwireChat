@@ -19,6 +19,22 @@
           <%= f.label :password_confirmation, class: "sr-only" %>
           <%= f.password_field :password_confirmation, autocomplete: "new-password", required: true, placeholder: "Password confirmation", class: "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
         </div>
+        <div>
+          <%= f.label :name, class: "sr-only" %>
+          <%= f.text_field :name, autofocus: true, autocomplete: "name", required: true, placeholder: "Name", class: "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
+        </div>
+        <div>
+          <%= f.label :surname, class: "sr-only" %>
+          <%= f.text_field :surname, autofocus: true, autocomplete: "surname", required: true, placeholder: "Surname", class: "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
+        </div>
+        <div>
+          <%= f.label :phone_number, class: "sr-only" %>
+          <%= f.text_field :phone_number, autofocus: true, autocomplete: "phone_number", required: false, placeholder: "Phone Number", class: "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
+        </div>
+        <div>
+          <%= f.label :about, class: "sr-only" %>
+          <%= f.text_field :about, autofocus: true, autocomplete: "about", required: false, placeholder: "About", class: "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
+        </div>
       </div>
 
       <div>

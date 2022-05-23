@@ -13,8 +13,6 @@ class RoomsController < ApplicationController
   def create
     @new_room = Room.new(user: current_user)
 
-    if @new_room.save
-      @new_room.broadcast_append_to :rooms
-    end
+    @new_room.broadcast_append_to :rooms if @new_room.save
   end
 end
