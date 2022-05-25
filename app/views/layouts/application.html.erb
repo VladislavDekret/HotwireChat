@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hotwirechat</title>
+    <title>Hotwire Chat</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -24,6 +24,7 @@
               </div>
               <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-4">
+                  <h1 class="text-2xl font-bold text-white">Hotwire Chat</h1>
                   <% if current_user.present? %>
                     <%= link_to "Profile", user_path(current_user.id), class: "text-gray-300
                       hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium
@@ -47,6 +48,7 @@
 
         <!-- Mobile menu, show/hide based on menu state. -->
         <div class="md:hidden" id="mobile-menu">
+          <h1 class="text-2xl font-bold text-white">Hotwire Chat</h1>
           <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <% if current_user.present? %>
               <%= link_to "Profile", user_path(current_user.id), class: "text-gray-300
@@ -67,11 +69,6 @@
         </div>
       </nav>
 
-      <header class="bg-white shadow">
-        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 class="text-3xl font-bold text-gray-900">Hotwirechat</h1>
-        </div>
-      </header>
       <main>
         <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           <%= yield %>
