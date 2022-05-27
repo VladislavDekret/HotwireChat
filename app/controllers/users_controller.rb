@@ -1,12 +1,15 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
+    @user_likes = Like.where(user_id: @user.id)
 
     @user_messages = MessageDecorator.decorate_collection(
       Message.includes(:likes)
         .where(user_id: @user.id)
         .where('messages.user_id' == 'likes.user_id')
         .where('messages.id' == 'likes.message_id')
+        .sort_by(&:likes_count)
+        .reverse
     )
   end
 
